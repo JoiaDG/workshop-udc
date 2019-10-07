@@ -7,9 +7,12 @@ import retrofit2.http.Query
 
 interface ApiService {
 
+    /**
+     * Change apiKey value with your own openweathermap.org api key
+     */
     @GET("weather")
     fun getWeatherByCity(
         @Query("q") city: String,
-        @Query("APPID") apiKey: String = "cfe738f6f981649b6c30fee2dee8e1ce") : Call<WeatherResponse>
+        @Query("APPID") apiKey: String = "<your api key>") : Call<WeatherResponse>
 
 }
